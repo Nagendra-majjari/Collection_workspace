@@ -1,0 +1,18 @@
+package in.ashokit;
+
+import java.io.Serializable;
+
+class Student implements Serializable{
+	String sname;
+	String section;
+	int marks;
+	
+}
+
+public class SerializationDemo {
+
+	public static void main(String[] args) {
+
+	}
+
+}

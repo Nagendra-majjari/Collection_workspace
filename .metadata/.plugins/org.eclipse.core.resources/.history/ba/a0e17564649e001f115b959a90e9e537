@@ -1,0 +1,25 @@
+package com.ashokit;
+
+import java.util.Scanner;
+
+public class SpyNumber {
+      public static void main(String[] args) {
+    	  int num =123;
+    	  
+    	  int sum =0,product=1;
+          while(num > 0) {
+       	   int digit =num % 10;
+       	   sum+=digit;
+       	   product*=digit;
+       	   num=num/10;
+          }
+    	if(num == sum && num == product) {
+    		System.out.println(num+":  is Spy number");
+    	}else {
+    		System.out.println(num+":  is not Spy  number");
+    	}
+      }
+    }
+
+	
+

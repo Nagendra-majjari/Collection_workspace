@@ -1,0 +1,30 @@
+package com.ashokit;
+
+import java.util.Scanner;
+
+public class SpyNumber {
+      public static void main(String[] args) {
+    	  Scanner scan = new Scanner (System.in);
+    	  System.out.println("Enter the number :");
+    	  int num = scan.nextInt();
+    	  
+    	  
+    	if(isSpyNumber(num)) {
+    		System.out.println(num+":  is Spy number");
+    	}
+    	else {
+    		System.out.println(num+":  is not Spy  number");
+    	}
+      }
+
+	private static boolean isSpyNumber(int num) {
+           int sum =0,product=1;
+           while(num != 0) {
+        	   int digit =num % 10;
+        	   sum+=digit;
+        	   product*=digit;
+        	   num=num/10;
+           }
+           return sum == product;
+	}
+}

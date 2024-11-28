@@ -1,0 +1,37 @@
+package in.ashokit;
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
+
+class Student implements Serializable{
+	String sname;
+	String section;
+	int marks;
+	public Student(String sname, String section, int marks) {
+		super();
+		this.sname = sname;
+		this.section = section;
+		this.marks = marks;
+	}
+	
+}
+
+public class SerializationDemo {
+
+	public static void main(String[] args) {
+      Student s1 = new Student("nagendra","s1",958);
+      try {
+    	  FileOutputStreem file = new FileOutputStreem("c:\\sreeja");
+    	  ObjectOutputStreem o1 = new ObjectOutputStreem(file);
+    	  o1.writeObject(s1);
+    	 
+    	  o1.close();
+    	  file.close();
+      }catch(Exception e){
+    	  System.out.println(e);
+    	  }
+      }
+	
+	}
+
+}
